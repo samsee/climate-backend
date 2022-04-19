@@ -9,13 +9,14 @@ gem "dotenv-rails"
 
 # assets
 gem "sprockets-rails"
-gem "jsbundling-rails"
+gem "importmap-rails", "~> 1.0"
+#gem "jsbundling-rails"
 gem "turbo-rails"
 gem "stimulus-rails"
-gem "cssbundling-rails"
+#gem "cssbundling-rails"
 
 # utils
-# gem "jbuilder"
+gem "jbuilder"
 gem 'administrate'
 gem 'administrate-field-active_storage'
 gem "image_processing", "~> 1.2"
