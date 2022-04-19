@@ -15,7 +15,7 @@ gem "stimulus-rails"
 gem "cssbundling-rails"
 
 # utils
-gem "jbuilder"
+# gem "jbuilder"
 gem 'administrate'
 gem 'administrate-field-active_storage'
 gem "image_processing", "~> 1.2"

@@ -1,4 +1,7 @@
 {
   "name": "app",
-  "private": "true"
+  "private": "true",
+  "engines": {
+    "yarn": "1.22.10"
+  }
 }
