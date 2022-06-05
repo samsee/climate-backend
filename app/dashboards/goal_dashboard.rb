@@ -11,6 +11,10 @@ class GoalDashboard < Administrate::BaseDashboard
     id: Field::Number,
     title: Field::String,
     depth: Field::String,
+    ancestry: Field::Select.with_options(
+      collection: Goal.all.map do |goal| [goal.title, goal.id] end,
+      include_blank: true
+    ),
     detail: Field::Text,
     data_status: Field::String,
     emission_2016: Field::Number.with_options(searchable: false),
@@ -33,8 +37,7 @@ class GoalDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = %i[
     id
     title
-    depth
-    detail
+    ancestry
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -42,6 +45,7 @@ class GoalDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = %i[
     id
     title
+    ancestry
     depth
     detail
     data_status
@@ -62,6 +66,7 @@ class GoalDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
     title
+    ancestry
     depth
     detail
     data_status

@@ -17,5 +17,11 @@ module Admin
     # def records_per_page
     #   params[:per_page] || 20
     # end
+
+    def resource_params
+      params.require(resource_class.model_name.param_key).
+        permit(dashboard.permitted_attributes).
+        transform_values { |value| value == "" ? nil : value }
+    end
   end
 end

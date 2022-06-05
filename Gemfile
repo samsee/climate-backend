@@ -7,6 +7,9 @@ gem "rails", "~> 7.0.2", ">= 7.0.2.3"
 gem "pg", "~> 1.1"
 gem "dotenv-rails"
 
+# model
+gem 'ancestry'
+
 # assets
 gem "sprockets-rails"
 gem "importmap-rails", "~> 1.0"
