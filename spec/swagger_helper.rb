@@ -27,7 +27,7 @@ RSpec.configure do |config|
           url: 'http://{defaultHost}',
           variables: {
             defaultHost: {
-              default: 'http://api.climate.codefor.kr/'
+              default: 'api.climate.codefor.kr/'
             }
           }
         }
