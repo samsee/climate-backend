@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  mount Rswag::Ui::Engine => '/api-docs'
+  mount Rswag::Api::Engine => '/api-docs'
+
   namespace :admin do
     resources :goals
     resources :tools
@@ -10,7 +13,7 @@ Rails.application.routes.draw do
     root to: "goals#index"
   end
 
-  resources :tools
+  resources :tools, only: [:index, :show]
   resources :data_sources
   resources :goals
   resources :documents

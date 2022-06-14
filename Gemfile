@@ -28,6 +28,10 @@ gem "image_processing", "~> 1.2"
 gem "puma", "~> 5.0"
 gem "redis", "~> 4.0"
 
+# swagger
+gem 'rspec-rails'
+gem 'rswag'
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 

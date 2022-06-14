@@ -1,0 +1,125 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/data_sources":
+    get:
+      summary: list data_sources
+      responses:
+        '200':
+          description: successful
+  "/data_sources/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show data_source
+      responses:
+        '200':
+          description: successful
+  "/documents":
+    get:
+      summary: list documents
+      responses:
+        '200':
+          description: successful
+  "/documents/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show document
+      responses:
+        '200':
+          description: successful
+  "/goals":
+    get:
+      summary: list goals
+      responses:
+        '200':
+          description: successful
+  "/goals/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show goal
+      responses:
+        '200':
+          description: successful
+  "/policies":
+    get:
+      summary: list policies
+      responses:
+        '200':
+          description: successful
+  "/policies/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show policy
+      responses:
+        '200':
+          description: successful
+  "/stories":
+    get:
+      summary: list stories
+      responses:
+        '200':
+          description: successful
+  "/stories/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show story
+      responses:
+        '200':
+          description: successful
+  "/tools":
+    get:
+      summary: list tools
+      responses:
+        '200':
+          description: successful
+  "/tools/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show tool
+      responses:
+        '200':
+          description: successful
+servers:
+- url: http://{defaultHost}
+  variables:
+    defaultHost:
+      default: localhost:3000/
