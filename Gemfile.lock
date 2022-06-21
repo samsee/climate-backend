@@ -321,6 +321,7 @@ DEPENDENCIES
   image_processing (~> 1.2)
   importmap-rails (~> 1.0)
   jbuilder
+  kaminari
   pg (~> 1.1)
   puma (~> 5.0)
   rack-cors

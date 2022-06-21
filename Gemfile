@@ -9,6 +9,7 @@ gem "dotenv-rails"
 
 # model
 gem 'ancestry'
+gem "kaminari"
 
 # assets
 gem "sprockets-rails"
