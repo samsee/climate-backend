@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'pages/home'
   mount Rswag::Ui::Engine => '/api-docs'
   mount Rswag::Api::Engine => '/api-docs'
 
@@ -19,4 +20,6 @@ Rails.application.routes.draw do
   resources :documents
   resources :policies
   resources :stories
+
+  root to: "pages#home"
 end

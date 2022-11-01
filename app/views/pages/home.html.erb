@@ -1,0 +1,52 @@
+<section>
+  <h2>2030 NDC 부문별 목표와 현황</h2>
+  <% @root_goals.each do |goal| %>
+    <%= link_to goal.title, goal %>
+  <% end %>
+</section>
+
+<section>
+  <h2>2030 NDC 세부 부문 목표와 현황</h2>
+
+  <% @root_goals.each do |root_goal| %>
+    <h3><%= root_goal.title %></h3>
+    <% root_goal.children.each do |goal| %>
+      <%= link_to goal do %>
+        <h4><%= goal.title %></h4>
+        <p>2016년 배출량: <%= goal.emission_2016 %></p>
+        <p>2030년 목표: <%= goal.emission_goal_2030 %></p>
+      <% end %>
+    <% end %>
+  <% end %>
+</section>
+
+<section>
+  <h2>데이터(최신순)</h2>
+  <ul>
+    <% @data_sources.each do |ds| %>
+      <li><%= link_to ds.title, ds %></li>
+    <% end %>
+  </ul>
+</section>
+
+<section>
+  <h2>관련기사(최신순)</h2>
+  <ul>
+    <% @stories.each do |story| %>
+      <li><%= link_to story.title, story %></li>
+    <% end %>
+  </ul>
+</section>
+
+<section>
+  <h2>관련정책(최신순)</h2>
+  <ul>
+    <% @policies.each do |policy| %>
+      <li><%= link_to policy.title, policy %></li>
+    <% end %>
+  </ul>
+</section>
+
+<section>
+  <h2>기여하시는 분들과 참여하는 방법</h2>
+</section>
