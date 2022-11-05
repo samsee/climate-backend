@@ -13,11 +13,11 @@ gem "kaminari"
 
 # assets
 gem "sprockets-rails"
-gem "importmap-rails", "~> 1.0"
-#gem "jsbundling-rails"
-gem "turbo-rails"
-gem "stimulus-rails"
-#gem "cssbundling-rails"
+# gem "importmap-rails", "~> 1.0"
+gem "jsbundling-rails"
+# gem "turbo-rails"
+# gem "stimulus-rails"
+gem "cssbundling-rails"
 
 # utils
 gem "jbuilder"
