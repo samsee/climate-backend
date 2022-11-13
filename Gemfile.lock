@@ -316,7 +316,6 @@ DEPENDENCIES
   rspec-rails
   rswag
   selenium-webdriver
-  sprockets-rails
   tzinfo-data
   web-console
   webdrivers

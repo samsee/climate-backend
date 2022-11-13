@@ -12,7 +12,7 @@ gem 'ancestry'
 gem "kaminari"
 
 # assets
-gem "sprockets-rails"
+# gem "sprockets-rails"
 # gem "importmap-rails", "~> 1.0"
 gem "jsbundling-rails"
 # gem "turbo-rails"
