@@ -70,7 +70,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_05_012324) do
 
   create_table "documents", force: :cascade do |t|
     t.string "title"
-    t.bigint "policy_id", null: false
+    t.integer "policy_id", null: false
     t.text "detail"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -136,7 +136,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_05_012324) do
 
   create_table "tools", force: :cascade do |t|
     t.string "title"
-    t.bigint "goal_id", null: false
+    t.integer "goal_id", null: false
     t.text "detail"
     t.string "key_indicator"
     t.string "key_indicator_unit"

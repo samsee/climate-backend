@@ -1,0 +1,10 @@
+<section class="shadow-xl bg-base-100 card">
+  <div class="card-body">
+    <%= link_to goal do %>
+      <h3 class="card-title"><%= goal.title %></h4>
+      <p>2016년 배출량: <%= goal.emission_2016 %></p>
+      <p>2030년 목표: <%= goal.emission_goal_2030 %></p>
+
+    <% end %>
+  </div>
+</section>
