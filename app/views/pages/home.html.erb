@@ -33,6 +33,15 @@
 
 <section class="py-8">
   <div class="container mx-auto">
+    <h2 class="mb-4 text-3xl font-bold">2030 NDC 감축수단과 현황</h2>
+    <div class="grid grid-cols-3 gap-4">
+      <%= render @tools %>
+    </div>
+  </div>
+</section>
+
+<section class="py-8">
+  <div class="container mx-auto">
     <h2 class="mb-4 text-3xl font-bold">데이터(최신순)</h2>
     <table class="table w-full table-auto">
       <tbody>
@@ -67,11 +76,5 @@
         <li><%= link_to policy.title, policy %></li>
       <% end %>
     </ul>
-  </div>
-</section>
-
-<section class="py-8">
-  <div class="container mx-auto">
-    <h2 class="mb-4 text-3xl font-bold">기여하시는 분들과 참여하는 방법</h2>
   </div>
 </section>
