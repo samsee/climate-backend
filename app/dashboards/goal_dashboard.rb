@@ -10,13 +10,9 @@ class GoalDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     id: Field::Number,
     title: Field::String,
-    depth: Field::String,
-    ancestry: Field::Select.with_options(
-      collection: Goal.all.map do |goal| [goal.title, goal.id] end,
-      include_blank: true
-    ),
+    ancestry: AncestryField,
     detail: Field::Text,
-    data_status: Field::String,
+    data_status: Field::Text,
     emission_2016: Field::Number.with_options(searchable: false),
     emission_2017: Field::Number.with_options(searchable: false),
     emission_2018: Field::Number.with_options(searchable: false),
@@ -27,7 +23,7 @@ class GoalDashboard < Administrate::BaseDashboard
     emission_goal_2030: Field::Number.with_options(searchable: false),
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
-  }.freeze
+  }
 
   # COLLECTION_ATTRIBUTES
   # an array of attributes that will be displayed on the model's index page.
@@ -38,6 +34,8 @@ class GoalDashboard < Administrate::BaseDashboard
     id
     title
     ancestry
+    emission_2018
+    emission_goal_2030
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -46,7 +44,6 @@ class GoalDashboard < Administrate::BaseDashboard
     id
     title
     ancestry
-    depth
     detail
     data_status
     emission_2016
@@ -67,7 +64,6 @@ class GoalDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = %i[
     title
     ancestry
-    depth
     detail
     data_status
     emission_2016
