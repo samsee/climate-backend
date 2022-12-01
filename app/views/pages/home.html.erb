@@ -20,20 +20,20 @@
   </div>
 </section>
 
-<section id='root_goals' class="py-8 mt-8">
+<section id='root_goals' class="py-8 my-8">
   <div class="container mx-auto">
-    <h2 class="mb-4 text-3xl font-bold">부문별 목표와 현황</h2>
+    <h2 class="my-4 text-3xl font-bold">부문별 목표와 현황</h2>
     <div class="grid grid-cols-3 gap-4">
       <%= render @root_goals %>
     </div>
   </div>
 </section>
 
-<section id='specific_goals' class="py-8 mt-8">
+<section id='specific_goals' class="py-8 my-8">
   <div class="container mx-auto">
-    <h2 class="mb-4 text-3xl font-bold">세부 부문 목표와 현황</h2>
+    <h2 class="my-4 text-3xl font-bold">세부 부문 목표와 현황</h2>
     <% @root_goals.each do |root_goal| %>
-      <h3 class="mb-4 text-2xl font-bold"><%= root_goal.title %></h3>
+      <h3 class="my-4 text-2xl font-bold"><%= root_goal.title %></h3>
       <div class="grid grid-cols-3 gap-4">
         <%= render root_goal.children %>
       </div>
@@ -41,9 +41,10 @@
   </div>
 </section>
 
-<section id='data_sources' class="py-8 mt-8">
+<section id='data_sources' class="py-8 my-8">
   <div class="container mx-auto">
-    <h2 class="mb-4 text-2xl font-bold">데이터(최신순)</h2>
+    <h2 class="my-4 text-3xl font-bold">관련 자료</h2>
+    <h3 class="my-4 text-2xl font-bold">데이터(최신순)</h2>
     <table class="table w-full table-auto">
       <tbody>
         <% @data_sources.each do |ds| %>
@@ -58,7 +59,7 @@
   </div>
 
   <div class="container mx-auto mt-8">
-    <h2 class="mb-4 text-2xl font-bold">기사(최신순)</h2>
+    <h3 class="my-4 text-2xl font-bold">기사(최신순)</h2>
     <ul>
       <% @stories.each do |story| %>
         <li><%= link_to story.title, story %></li>
@@ -67,7 +68,7 @@
   </div>
 
   <div class="container mx-auto mt-8">
-    <h2 class="mb-4 text-2xl font-bold">정책(최신순)</h2>
+    <h3 class="my-4 text-2xl font-bold">정책(최신순)</h2>
     <ul>
       <% @policies.each do |policy| %>
         <li><%= link_to policy.title, policy %></li>
