@@ -2,7 +2,7 @@
   <div class="container mx-auto">
     <div class="py-4 mb-2 text-center lg:py-10 lg:text-left">
       <h2 class="text-lg font-extrabold font-title sm:text-2xl lg:text-3xl">코드포코리아 Code for Korea</h2>
-      <h1 class="mb-2 text-4xl font-extrabold font-title sm:text-5xl lg:text-7xl">기후변화 프로젝트</h1>
+      <h1 class="mb-2 text-4xl font-extrabold font-title sm:text-5xl lg:text-7xl">탄소중립 대시보드</h1>
     </div>
     <div class="p-20 bg-white w-100">
       Chart Here
@@ -10,7 +10,17 @@
   </div>
 </div>
 
-<section class="py-8">
+<section class="sticky top-0 z-40 bg-base-200">
+  <div class="container mx-auto">
+    <div class="justify-between overflow-x-auto justify-items-stretch tabs tabs-boxed">
+      <a href="#root_goals" class="tab tab-lg">부문 목표</a>
+      <a href="#specific_goals" class="tab tab-lg">세부 목표</a>
+      <a href="#data_sources" class="tab tab-lg">관련 자료</a>
+    </div>
+  </div>
+</section>
+
+<section id='root_goals' class="py-8 mt-8">
   <div class="container mx-auto">
     <h2 class="mb-4 text-3xl font-bold">부문별 목표와 현황</h2>
     <div class="grid grid-cols-3 gap-4">
@@ -19,7 +29,7 @@
   </div>
 </section>
 
-<section class="py-8">
+<section id='specific_goals' class="py-8 mt-8">
   <div class="container mx-auto">
     <h2 class="mb-4 text-3xl font-bold">세부 부문 목표와 현황</h2>
     <% @root_goals.each do |root_goal| %>
@@ -31,18 +41,9 @@
   </div>
 </section>
 
-<section class="py-8">
+<section id='data_sources' class="py-8 mt-8">
   <div class="container mx-auto">
-    <h2 class="mb-4 text-3xl font-bold">감축수단과 현황</h2>
-    <div class="grid grid-cols-3 gap-4">
-      <%= render @tools %>
-    </div>
-  </div>
-</section>
-
-<section class="py-8">
-  <div class="container mx-auto">
-    <h2 class="mb-4 text-3xl font-bold">데이터(최신순)</h2>
+    <h2 class="mb-4 text-2xl font-bold">데이터(최신순)</h2>
     <table class="table w-full table-auto">
       <tbody>
         <% @data_sources.each do |ds| %>
@@ -55,22 +56,18 @@
       </tbody>
     </table>
   </div>
-</section>
 
-<section class="py-8">
-  <div class="container mx-auto">
-    <h2 class="mb-4 text-3xl font-bold">기사(최신순)</h2>
+  <div class="container mx-auto mt-8">
+    <h2 class="mb-4 text-2xl font-bold">기사(최신순)</h2>
     <ul>
       <% @stories.each do |story| %>
         <li><%= link_to story.title, story %></li>
       <% end %>
     </ul>
   </div>
-</section>
 
-<section class="py-8">
-  <div class="container mx-auto">
-    <h2 class="mb-4 text-3xl font-bold">정책(최신순)</h2>
+  <div class="container mx-auto mt-8">
+    <h2 class="mb-4 text-2xl font-bold">정책(최신순)</h2>
     <ul>
       <% @policies.each do |policy| %>
         <li><%= link_to policy.title, policy %></li>
