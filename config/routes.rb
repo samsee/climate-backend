@@ -22,4 +22,6 @@ Rails.application.routes.draw do
   resources :stories
 
   root to: "pages#home"
+
+  get '/api/charts', to: 'api/charts#summary'  # TODO 일단 정적으로 붙여놨습니다.
 end
